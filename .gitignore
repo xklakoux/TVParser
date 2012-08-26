@@ -1,6 +1,13 @@
 *.class
+bin/
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Databases #
+*.db
+
+# Vim files #
+*.swp
