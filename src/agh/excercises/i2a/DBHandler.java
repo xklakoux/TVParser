@@ -17,19 +17,19 @@ import org.apache.log4j.Logger;
 
 public class DBHandler {
 
-	public static final String DB_NAME = "tv.db";
+	
 	public static final String PROGRAMS_T = "programs";
 	public static final String CATEGORIES_T = "categories";
 	public static final String CHANNELS_T = "channels";
 	private Connection conn = null;
-	private static DBHandler instance = null;
+	private static DBHandler _instance = null;
 	public static Logger logger = Logger.getLogger(DBHandler.class);
 	public static String queryTime="select strftime('%Y-%m-%d','now','0 day');";
 
 
-	public DBHandler() throws ClassNotFoundException, SQLException {
+	private DBHandler() throws ClassNotFoundException, SQLException {
 		Class.forName("org.sqlite.JDBC");
-		conn = DriverManager.getConnection("jdbc:sqlite:" + DB_NAME);
+		conn = DriverManager.getConnection("jdbc:sqlite:" + MyProperties.getInstance().db_name);
 		Statement stat = conn.createStatement();
 		String query = ""
 				+ "DROP TABLE IF EXISTS " + CHANNELS_T + ";"
@@ -78,10 +78,10 @@ public class DBHandler {
 
 
 
-	public static DBHandler getInstance(){
-		if(instance == null){
+	public synchronized static DBHandler getInstance(){
+		if(_instance == null){
 			try {
-				instance = new DBHandler();
+				_instance = new DBHandler();
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -91,7 +91,7 @@ public class DBHandler {
 			}
 		}
 		
-		return instance;
+		return _instance;
 	}
 	
 	public void insertChannels(Hashtable<String, String> channels) throws SQLException{
@@ -105,7 +105,7 @@ public class DBHandler {
 		while(e.hasMoreElements()){
 			key = e.nextElement();
 			String query = "insert into " +CHANNELS_T+ "(id, name) values ("+key+","+"\'"+channels.get(key)+"\');";
-//			logger.debug(query);
+			//logger.debug(query);
 			stmt.addBatch(query); 
 		}
 		conn.setAutoCommit(true);
@@ -148,7 +148,7 @@ public class DBHandler {
 		while(e.hasMoreElements()){
 			key = e.nextElement();
 			String query = "insert into " +CATEGORIES_T+ "(id, name) values ("+key+","+"\'"+categories.get(key)+"\');";
-			logger.debug(query);
+			//logger.debug(query);
 			stmt.addBatch(query); 
 		}
 		conn.setAutoCommit(true);
@@ -157,15 +157,17 @@ public class DBHandler {
 	
 	}
 	
-	public void insertProgram(String title, String desc, String time) throws SQLException{
+	public void insertProgram(String title, String desc, String time, String date) throws SQLException{
+		
 		String canal = MyProperties.getInstance().channel;
 		Statement stmt = conn.createStatement();
-		String dbDate = TVParser.getDate(Integer.valueOf(MyProperties.getInstance().day))+" "+time;
-		logger.debug("this date  --> " + dbDate);
+		//String dbDate = TVParser.getDate(Integer.valueOf(MyProperties.getInstance().day))+" "+time;
+		//logger.debug("this date  --> " + dbDate);
 		desc = (desc!=null?desc:"");
-		String query = "Insert into "+PROGRAMS_T+" (id_cha, name, desc, date) values ("+canal+",'"+title+"','"+desc+"','"+dbDate+"');";
+		String query = "insert into "+PROGRAMS_T+" (id_cha, name, desc, date) values ("+canal+",'"+title+"','"+desc+"','"+date+ " " + time + "');";
 		logger.debug("DBQuery ->" + query);
 		stmt.executeUpdate(query);
+
 	}
 	
 }

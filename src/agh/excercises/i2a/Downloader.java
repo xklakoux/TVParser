@@ -31,19 +31,20 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.Future;
+import java.util.concurrent.FutureTask;
 import java.sql.*;
 
 import org.apache.log4j.*;
 
-public class Downloader extends Thread implements Runnable {
+public class Downloader implements Runnable {
 
 	private String address;
 	private String output = "stanice";
 	private URL url;
-	private File file;
+	private File file = null;
 	private MyProperties properties;
 
-	public static final int TIMEOUT = 6000;
 	static Logger logger = Logger.getLogger(Downloader.class);
 
 	public Downloader(String address) {
@@ -96,19 +97,20 @@ public class Downloader extends Thread implements Runnable {
 
 			CookieManager manager = new CookieManager();
 			CookieHandler.setDefault(manager);
-			CookieStore cookieJar = manager.getCookieStore();
-
-			HttpCookie cookie = new HttpCookie("foo", "bar");
-			try {
-				cookieJar.add(url.toURI(), cookie);
-			} catch (URISyntaxException e) {
-				e.printStackTrace();
-			}
+			
+//			CookieStore cookieJar = manager.getCookieStore();
+			
+//			HttpCookie cookie = new HttpCookie("foo", "bar");
+//			try {
+//				cookieJar.add(url.toURI(), cookie);
+//			} catch (URISyntaxException e) {
+//				e.printStackTrace();
+//			}
 
 			URLConnection postUrlConnection = url.openConnection();
 
 			postUrlConnection.setReadTimeout(Integer.valueOf(MyProperties.getInstance().timeout));
-			postUrlConnection.setUseCaches(true);
+			//postUrlConnection.setUseCaches(true);
 			Map responseMap = postUrlConnection.getHeaderFields();
 			// postUrlConnection = url.openConnection();
 			for (Iterator iterator = responseMap.keySet().iterator(); iterator
@@ -138,15 +140,20 @@ public class Downloader extends Thread implements Runnable {
 			long diffTime;
 			long fileSize = file.length();
 			long diff;
+			logger.debug("Starting to download");
+
+			Random rand = new Random();
+			new FutureTask<Downloader>(this,this);
 			while ((line = br.readLine()) != null) {
 
 				fstream.write(line + '\n');
 				diff = file.length() - fileSize;
 				diffTime = System.nanoTime() - startTime;
-				logger.debug((float) diff / (diffTime / Math.pow(10, 6))
+				if(rand.nextInt(20)<2){
+				logger.info((float) diff / (diffTime / Math.pow(10, 6))
 						+ " KB/s");
 				// }
-
+				}
 			}
 		} catch (MalformedURLException mue) {
 			mue.printStackTrace();
@@ -165,9 +172,6 @@ public class Downloader extends Thread implements Runnable {
 			}
 		}
 		logger.info("Downloaded " + address + " into " + output);
-		ParseWebsite parse = new ParseWebsite(output, ParseWebsite.PROGRAM);
-		logger.debug("Starting to parse");
-		parse.start();
 
 	}
 

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//iDNES//DTD HTML 4//EN" "http://gidnes.cz/dtd/n3_uni.dtd">
+<html>
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+   <meta http-equiv="cache-control" content="no-cache">
+   <meta property="fb:app_id" content="120489248467">
+   <meta property="og:site_name" content="iDNES.cz">
+   <meta name="robots" content="all">
+   <link rel="apple-touch-icon" sizes="57×57" href="http://gidnes.cz/u/favicon/apple-small.png" >
+   <link rel="apple-touch-icon" sizes="114×114" href="http://gidnes.cz/u/favicon/apple-big.png" >
+<title>iDNES.cz - Přidání TV programu</title>
+
+   <link rel="shortcut icon" href="http://gidnes.cz/u/favicon/idnes.ico">
+   <script type="text/javascript" src="http://gidnes.cz/js/uni/uni.js?rr=14"></script>
+   <script type="text/javascript" src="http://gidnes.cz/js/ad/reklamy.js"></script>
+   <meta property="og:type" content="website">
+   <link href="http://servis.idnes.cz/rss.aspx?c=kultura" rel="alternate" type="application/rss+xml" title="RSS">
+
+<style type="text/css">
+<!--
+	@import "http://gidnes.cz/css/n4/uni.css?rr=018";
+	@import "http://gidnes.cz/css/n4/layout.css?rr=018";
+	@import "http://gidnes.cz/css/n4/tvprogram-popup.css?rr=018";
+-->
+</style>
+
+
+<body>
+<div id="popup-box-title" class="h">
+			Přidání TV stanice
+			<span>Řadit tématicky / <a href="http://tvprogram.idnes.cz/stanice.asp?sort=alphabet" target="popup">Řadit abecedně</a></span></div>
+<div id="main" class="w880">
+<div id="full-list" class="box-in">
+<form method="get" id="other" action="http://tvprogram.idnes.cz/" target="_parent"><input type="hidden" name="den" value=""><div class="w2-a">
+<div id="seznam-stanic" class="list-focus type">
+<div class="entry">
+<h3>Základní české</h3>
+<ul>
+<li><input type="checkbox" name="k" value="1" id="channel-1" checked><label for="channel-1">ČT 1</label></li>
+<li><input type="checkbox" name="k" value="2" id="channel-2" checked><label for="channel-2">ČT 2</label></li>
+<li><input type="checkbox" name="k" value="3" id="channel-3" checked><label for="channel-3">Nova</label></li>
+<li><input type="checkbox" name="k" value="4" id="channel-4" checked><label for="channel-4">Prima family</label></li>
+<li><input type="checkbox" name="k" value="89" id="channel-89" checked><label for="channel-89">Barrandov</label></li>
+<li><input type="checkbox" name="k" value="92" id="channel-92" checked><label for="channel-92">Prima COOL</label></li>
+<li><input type="checkbox" name="k" value="78" id="channel-78" checked><label for="channel-78">Nova Cinema</label></li>
+<li><input type="checkbox" name="k" value="226" id="channel-226" checked><label for="channel-226">Prima love</label></li>
+</ul>
+<div class="fc0"></div>
+<h3>Zpravodajské</h3>
+<ul>
+<li><input type="checkbox" name="k" value="24" id="channel-24" checked><label for="channel-24">ČT 24</label></li>
+<li><input type="checkbox" name="k" value="22" id="channel-22"><label for="channel-22">BBC Entertainment</label></li>
+<li><input type="checkbox" name="k" value="23" id="channel-23"><label for="channel-23">CNN</label></li>
+<li><input type="checkbox" name="k" value="68" id="channel-68"><label for="channel-68">TA3</label></li>
+</ul>
+<div class="fc0"></div>
+<h3>Filmové</h3>
+<ul>
+<li><input type="checkbox" name="k" value="9" id="channel-9"><label for="channel-9">AXN</label></li>
+<li><input type="checkbox" name="k" value="80" id="channel-80"><label for="channel-80">AXN Crime</label></li>
+<li><input type="checkbox" name="k" value="81" id="channel-81"><label for="channel-81">AXN Scifi</label></li>
+<li><input type="checkbox" name="k" value="7" id="channel-7"><label for="channel-7">Cinemax</label></li>
+<li><input type="checkbox" name="k" value="112" id="channel-112"><label for="channel-112">Cinemax2</label></li>
+<li><input type="checkbox" name="k" value="15" id="channel-15"><label for="channel-15">CS Film</label></li>
+<li><input type="checkbox" name="k" value="63" id="channel-63"><label for="channel-63">Film+</label></li>
+<li><input type="checkbox" name="k" value="64" id="channel-64"><label for="channel-64">Filmbox</label></li>
+<li><input type="checkbox" name="k" value="65" id="channel-65"><label for="channel-65">Filmbox Plus</label></li>
+<li><input type="checkbox" name="k" value="121" id="channel-121"><label for="channel-121">Filmbox HD</label></li>
+<li><input type="checkbox" name="k" value="5" id="channel-5"><label for="channel-5">HBO</label></li>
+<li><input type="checkbox" name="k" value="6" id="channel-6"><label for="channel-6">HBO 2</label></li>
+<li><input type="checkbox" name="k" value="76" id="channel-76"><label for="channel-76">HBO Comedy</label></li>
+<li><input type="checkbox" name="k" value="161" id="channel-161"><label for="channel-161">Kino CS</label></li>
+<li><input type="checkbox" name="k" value="56" id="channel-56"><label for="channel-56">MGM</label></li>
+</ul>
+<div class="fc0"></div>
+</div>
+<div class="entry">
+<h3>Sportovní</h3>
+<ul>
+<li><input type="checkbox" name="k" value="18" id="channel-18" checked><label for="channel-18">ČT 4 Sport</label></li>
+<li><input type="checkbox" name="k" value="114" id="channel-114"><label for="channel-114">ESPN America</label></li>
+<li><input type="checkbox" name="k" value="115" id="channel-115"><label for="channel-115">ESPN Classic Europe</label></li>
+<li><input type="checkbox" name="k" value="16" id="channel-16"><label for="channel-16">Eurosport</label></li>
+<li><input type="checkbox" name="k" value="25" id="channel-25"><label for="channel-25">Eurosport 2</label></li>
+<li><input type="checkbox" name="k" value="85" id="channel-85"><label for="channel-85">Extreme Sports</label></li>
+<li><input type="checkbox" name="k" value="17" id="channel-17"><label for="channel-17">Novasport</label></li>
+<li><input type="checkbox" name="k" value="61" id="channel-61"><label for="channel-61">Sport1</label></li>
+<li><input type="checkbox" name="k" value="93" id="channel-93"><label for="channel-93">Sport2</label></li>
+<li><input type="checkbox" name="k" value="91" id="channel-91"><label for="channel-91">Sport5</label></li>
+<li><input type="checkbox" name="k" value="86" id="channel-86"><label for="channel-86">Trojka</label></li>
+<li><input type="checkbox" name="k" value="224" id="channel-224"><label for="channel-224">DIGI Sport</label></li>
+<li><input type="checkbox" name="k" value="225" id="channel-225"><label for="channel-225">Golf Channel</label></li>
+</ul>
+<div class="fc0"></div>
+<h3>Dokumentární</h3>
+<ul>
+<li><input type="checkbox" name="k" value="11" id="channel-11"><label for="channel-11">Animal Planet</label></li>
+<li><input type="checkbox" name="k" value="12" id="channel-12"><label for="channel-12">Discovery</label></li>
+<li><input type="checkbox" name="k" value="113" id="channel-113"><label for="channel-113">Discovery Investigat</label></li>
+<li><input type="checkbox" name="k" value="98" id="channel-98"><label for="channel-98">Discovery Science</label></li>
+<li><input type="checkbox" name="k" value="99" id="channel-99"><label for="channel-99">Discovery Travel</label></li>
+<li><input type="checkbox" name="k" value="100" id="channel-100"><label for="channel-100">Discovery World</label></li>
+<li><input type="checkbox" name="k" value="101" id="channel-101"><label for="channel-101">DoQ</label></li>
+<li><input type="checkbox" name="k" value="125" id="channel-125"><label for="channel-125">History Channel</label></li>
+<li><input type="checkbox" name="k" value="147" id="channel-147"><label for="channel-147">History Channel HD</label></li>
+<li><input type="checkbox" name="k" value="21" id="channel-21"><label for="channel-21">National Geographic</label></li>
+<li><input type="checkbox" name="k" value="82" id="channel-82"><label for="channel-82">NG wild</label></li>
+<li><input type="checkbox" name="k" value="10" id="channel-10"><label for="channel-10">Spektrum</label></li>
+<li><input type="checkbox" name="k" value="105" id="channel-105"><label for="channel-105">Travel Channel</label></li>
+<li><input type="checkbox" name="k" value="13" id="channel-13"><label for="channel-13">Viasat Explorer</label></li>
+<li><input type="checkbox" name="k" value="14" id="channel-14"><label for="channel-14">Viasat History</label></li>
+</ul>
+<div class="fc0"></div>
+</div>
+<div class="entry">
+<h3>Hudební</h3>
+<ul>
+<li><input type="checkbox" name="k" value="67" id="channel-67"><label for="channel-67">Mezzo</label></li>
+<li><input type="checkbox" name="k" value="20" id="channel-20"><label for="channel-20">MTV</label></li>
+<li><input type="checkbox" name="k" value="149" id="channel-149"><label for="channel-149">Nova MTV</label></li>
+<li><input type="checkbox" name="k" value="133" id="channel-133"><label for="channel-133">Musiq1</label></li>
+<li><input type="checkbox" name="k" value="19" id="channel-19" checked><label for="channel-19">Óčko</label></li>
+<li><input type="checkbox" name="k" value="66" id="channel-66"><label for="channel-66">VH1</label></li>
+<li><input type="checkbox" name="k" value="69" id="channel-69"><label for="channel-69">VIVA</label></li>
+</ul>
+<div class="fc0"></div>
+<h3>Dětské</h3>
+<ul>
+<li><input type="checkbox" name="k" value="70" id="channel-70"><label for="channel-70">Animax</label></li>
+<li><input type="checkbox" name="k" value="73" id="channel-73"><label for="channel-73">Boomerang</label></li>
+<li><input type="checkbox" name="k" value="55" id="channel-55"><label for="channel-55">Cartoon+TCM</label></li>
+<li><input type="checkbox" name="k" value="31" id="channel-31"><label for="channel-31">Disney Channel</label></li>
+<li><input type="checkbox" name="k" value="32" id="channel-32"><label for="channel-32">Minimax</label></li>
+<li><input type="checkbox" name="k" value="77" id="channel-77"><label for="channel-77">Jim Jam</label></li>
+<li><input type="checkbox" name="k" value="109" id="channel-109"><label for="channel-109">Duck TV</label></li>
+</ul>
+<div class="fc0"></div>
+<h3>Polské</h3>
+<ul>
+<li><input type="checkbox" name="k" value="134" id="channel-134"><label for="channel-134">Polonia 1</label></li>
+<li><input type="checkbox" name="k" value="39" id="channel-39"><label for="channel-39">Polsat</label></li>
+<li><input type="checkbox" name="k" value="37" id="channel-37"><label for="channel-37">TVP 1</label></li>
+<li><input type="checkbox" name="k" value="38" id="channel-38"><label for="channel-38">TVP 2</label></li>
+</ul>
+<div class="fc0"></div>
+</div>
+<div class="entry">
+<h3>Ostatní české</h3>
+<ul>
+<li><input type="checkbox" name="k" value="302" id="channel-302"><label for="channel-302">Nova Fanda</label></li>
+<li><input type="checkbox" name="k" value="96" id="channel-96"><label for="channel-96">AXN Digi</label></li>
+<li><input type="checkbox" name="k" value="168" id="channel-168"><label for="channel-168">ČT HD</label></li>
+<li><input type="checkbox" name="k" value="28" id="channel-28"><label for="channel-28">Fine living network</label></li>
+<li><input type="checkbox" name="k" value="102" id="channel-102"><label for="channel-102">FNH</label></li>
+<li><input type="checkbox" name="k" value="30" id="channel-30"><label for="channel-30">Spektrum Home</label></li>
+<li><input type="checkbox" name="k" value="75" id="channel-75"><label for="channel-75">TV Noe</label></li>
+<li><input type="checkbox" name="k" value="29" id="channel-29"><label for="channel-29">TV Paprika</label></li>
+<li><input type="checkbox" name="k" value="8" id="channel-8"><label for="channel-8">Universal Channel</label></li>
+<li><input type="checkbox" name="k" value="26" id="channel-26"><label for="channel-26">Zone Reality</label></li>
+<li><input type="checkbox" name="k" value="27" id="channel-27"><label for="channel-27">Zone Romantica</label></li>
+</ul>
+<div class="fc0"></div>
+<h3>Slovenské</h3>
+<ul>
+<li><input type="checkbox" name="k" value="33" id="channel-33"><label for="channel-33">Jednotka</label></li>
+<li><input type="checkbox" name="k" value="34" id="channel-34"><label for="channel-34">Dvojka</label></li>
+<li><input type="checkbox" name="k" value="35" id="channel-35"><label for="channel-35">Markíza</label></li>
+<li><input type="checkbox" name="k" value="36" id="channel-36"><label for="channel-36">JOJ</label></li>
+<li><input type="checkbox" name="k" value="107" id="channel-107"><label for="channel-107">JOJ+</label></li>
+<li><input type="checkbox" name="k" value="145" id="channel-145"><label for="channel-145">TV Doma</label></li>
+</ul>
+<div class="fc0"></div>
+</div>
+<div class="entry">
+<h3>Německé a rakouské</h3>
+<ul>
+<li><input type="checkbox" name="k" value="46" id="channel-46"><label for="channel-46">3SAT</label></li>
+<li><input type="checkbox" name="k" value="42" id="channel-42"><label for="channel-42">ARD</label></li>
+<li><input type="checkbox" name="k" value="47" id="channel-47"><label for="channel-47">ARTE</label></li>
+<li><input type="checkbox" name="k" value="44" id="channel-44"><label for="channel-44">BR3</label></li>
+<li><input type="checkbox" name="k" value="151" id="channel-151"><label for="channel-151">DMAX</label></li>
+<li><input type="checkbox" name="k" value="48" id="channel-48"><label for="channel-48">DSF</label></li>
+<li><input type="checkbox" name="k" value="54" id="channel-54"><label for="channel-54">Kabel1</label></li>
+<li><input type="checkbox" name="k" value="45" id="channel-45"><label for="channel-45">MDR</label></li>
+<li><input type="checkbox" name="k" value="40" id="channel-40"><label for="channel-40">ORF1</label></li>
+<li><input type="checkbox" name="k" value="41" id="channel-41"><label for="channel-41">ORF2</label></li>
+<li><input type="checkbox" name="k" value="51" id="channel-51"><label for="channel-51">PRO7</label></li>
+<li><input type="checkbox" name="k" value="49" id="channel-49"><label for="channel-49">RTL</label></li>
+<li><input type="checkbox" name="k" value="50" id="channel-50"><label for="channel-50">RTL2</label></li>
+<li><input type="checkbox" name="k" value="52" id="channel-52"><label for="channel-52">SAT1</label></li>
+<li><input type="checkbox" name="k" value="53" id="channel-53"><label for="channel-53">VOX</label></li>
+<li><input type="checkbox" name="k" value="43" id="channel-43"><label for="channel-43">ZDF</label></li>
+</ul>
+<div class="fc0"></div>
+<h3>Erotické</h3>
+<ul>
+<li><input type="checkbox" name="k" value="72" id="channel-72"><label for="channel-72">Hustler</label></li>
+<li><input type="checkbox" name="k" value="127" id="channel-127"><label for="channel-127">Leo TV</label></li>
+<li><input type="checkbox" name="k" value="74" id="channel-74"><label for="channel-74">XXXXTREME</label></li>
+</ul>
+<div class="fc0"></div>
+</div>
+<div class="fc0"></div>
+</div>
+<div class="submit"><input type="submit" value="Uložit nastavení" class="submit"></div>
+</div>
+<div class="w2-b">
+<div id="poradi-stanic">
+<h2>Pořadí TV stanic</h2>
+<div class="box-in">
+<p>Klikni na název stanice a tahem změň pořadí.</p>
+<ul id="vybrane"></ul>
+<div class="fc0"></div>
+</div>
+<div class="help"><img src="http://gidnes.cz/p/televize2/popup/anim.gif" alt="Nápověda"></div>
+<div class="ico"><a href="#" class="ico-link" onClick="element('url-settings').classes.toggle('h'); return false;"><span></span>Odkaz na toto nastavení
+								</a></div>
+<div id="url-settings" class="h">
+<div class="popup-box">
+<div class="box">
+<div class="ico-r"><a href="#" class="ico-close" onClick="element('url-settings').classes.toggle('h'); return false;"><span></span></a></div>
+<h4>Odkaz na toto nastavení</h4><input type="text" id="adresa-nastaveni"><div class="fc0"></div>
+</div>
+</div>
+</div><input type="submit" value="Uložit nastavení" class="submit"><div class="fc0"></div>
+</div>
+</div>
+<div class="fc0"></div>
+</form>
+</div>
+</div>
+
+<script src="http://gidnes.cz/js/tv/tv.js"></script>
+<script>
+	TV.seznam([1, 2, 3, 4, 78, 92, 89, 226, 18, 24, 19]);
+</script>
+</body>
+</html>

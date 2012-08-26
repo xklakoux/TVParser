@@ -22,13 +22,14 @@ import net.htmlparser.jericho.Source;
  * The Class ParseWebsite.
  * 
  */
-public class ParseWebsite extends Thread {
+public class ParseWebsite implements Runnable {
 
 	Source source;
 	String sourceUrlString;
 	public final static int PROGRAM = 0;
 	public final static int CHANNELS = 1;
-	int doWhat;
+	private int doWhat;
+	
 
 
 	public static Logger logger = Logger.getLogger(ParseWebsite.class);
@@ -39,6 +40,11 @@ public class ParseWebsite extends Thread {
 		super();
 		this.doWhat = doWhat;
 		this.sourceUrlString = sourceUrlString;
+	
+	}
+
+	@Override
+	public void run() {
 		try {
 			if (sourceUrlString.indexOf(':') == -1)
 				sourceUrlString = "file:" + sourceUrlString;
@@ -50,17 +56,8 @@ public class ParseWebsite extends Thread {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
 
-	@Override
-	public void run() {
-		super.run();
-
-		// List<? extends Segment> segments = source
-		// .getAllElements(HTMLElementName.H3);
-
-		// displaySegments(segments);
-		if (doWhat == 1) {
+		if (doWhat == ParseWebsite.CHANNELS) {
 			channels = getAllChannels();
 			try {
 				DBHandler.getInstance().insertChannels(channels);
@@ -71,27 +68,29 @@ public class ParseWebsite extends Thread {
 //			categories = getAllCategories();
 
 		} else {
+			
+			logger.info("Starting to parse "+ sourceUrlString);
 			String time=null;
 			String title=null;
 			String desc=null;
+			String date=source.getFirstElementByClass("list-day").getFirstElementByClass("act").getFirstElement(HTMLElementName.A).getAttributeValue("href").split("=")[1];
+			logger.info("data -> " + date);
 			for(Segment segment: source.getAllElementsByClass("p\\d\\d.*")){
-				logger.info(segment.getFirstElementByClass("time").getContent().toString());
+				logger.debug(segment.getFirstElementByClass("time").getContent().toString());
 				time = segment.getFirstElementByClass("time").getContent().toString();
-				logger.info(segment.getFirstElement(HTMLElementName.A).getContent().toString());
+				logger.debug(segment.getFirstElement(HTMLElementName.A).getContent().toString());
 				title = segment.getFirstElement(HTMLElementName.A).getContent().toString();
 				if(segment.getFirstElement(HTMLElementName.P)!=null){
-					logger.info(segment.getFirstElement(HTMLElementName.P).getContent().toString());
+					logger.debug(segment.getFirstElement(HTMLElementName.P).getContent().toString());
 					desc = segment.getFirstElement(HTMLElementName.P).getContent().toString();
 				}
 				try {
-					DBHandler.getInstance().insertProgram(title, desc, time);
+					DBHandler.getInstance().insertProgram(title, desc, time, date);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
 			}
-			
 		}
 	}
 

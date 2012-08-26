@@ -16,7 +16,7 @@ public class MyProperties {
 	static public String reconnects = null;
 	static public String login = null;
 	static public String password = null;
-	static public String db = null;
+	static public String db_name = null;
 	static public String cookies = null;
 	static public String errorStream = null;
 
@@ -35,7 +35,7 @@ public class MyProperties {
 			reconnects = props.getProperty("RECONNECTS");
 			login = props.getProperty("LOGIN");
 			password = props.getProperty("PASSWORD");
-			db = props.getProperty("DB");
+			db_name = props.getProperty("DATABASE_NAME");
 			cookies = props.getProperty("COOKIES");
 			errorStream = props.getProperty("ERROR_STREAM");
 
